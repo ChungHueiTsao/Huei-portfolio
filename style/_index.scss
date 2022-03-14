@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 1px solid black;
+}
+
+body {
+    // position: relative;
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    background-image: url('/img/view3.jpg');
+    background-size:cover;
+}
+
+
+.index {
+    
+    .header {
+        display: flex;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(116, 93, 79);
+
+        a {
+            margin: 0 2rem;
+            font-size: larger;
+            text-decoration: none;
+            color: transparent;
+            background: #ffe4e4;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            // text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+
+            &:hover {
+                color: white;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+
+    .banner{
+        .banner1, .banner2 {
+            // z-index: 2;
+            background: no-repeat;
+            background-size: cover;
+            background-position-y: center;
+        }
+        .banner1{
+            // position: sticky;
+            width: 100%;
+            height: 50rem;
+            background-image: url('/img/view4.jpg');
+        }
+        .banner2{
+            position: sticky;
+            width: 100%;
+            top: 100rem;
+            margin-top: 30rem;
+            margin-bottom: 35rem;
+            height: 100rem;
+            background-image: url('/img/view2.jpg');
+        }
+    }
+
+
+    .footer{
+        display: flex;
+        height: 5rem;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(116, 93, 79);
+    }
+}
