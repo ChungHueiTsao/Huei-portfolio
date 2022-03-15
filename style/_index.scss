@@ -12,13 +12,44 @@ body {
 
 
 .index {
+    // position: relative;
+
+    .header {
+        display: flex;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(44, 48, 49);
+
+        a {
+            margin: 0 2rem;
+            font-size: larger;
+            text-decoration: none;
+            color: rgb(192, 192, 192);
+            background: #ffe4e4;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            // text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+
+            &:hover {
+                color: rgb(255, 255, 255);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+            }
+        }
+    }
+
     .banner{
-        filter: grayscale(70%);
-        -webkit-filter: grayscale(70%);
+        // position: relative;
+        filter: grayscale(50%);
+        -webkit-filter: grayscale(50%);
+        width: 100%;
 
         .banner1{
             /* The image used */
-            background-image: url("/img/view1.jpg");
+            background-image: url("/img/view6.jpg");
         
             /* Center and scale the image nicely */
             background-position: center;
@@ -32,9 +63,25 @@ body {
     
             /* Full height */
             width: 100%;
-            height: 100vh;
+            height: 170vh;
+
+            .HOME{
+                position: fixed;
+                z-index: 3;
+                // display: flex;
+                // justify-content: center;
+                top: 60rem; right: 50%;
+                transform: translate(50%, -50%);
+                // margin-left: 20rem;
+                width: 50rem;
+                height: 40rem;
+                background-color: #314366;
+                box-shadow: rgba(10, 9, 9, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+
         }
         .banner2{
+            position: relative;
             /* The image used */
             background-image: url("/img/view9.jpg");
         
@@ -45,16 +92,33 @@ body {
             background-size: cover;
     
             /* Add the blur effect */
-            filter: blur(8px);
-            -webkit-filter: blur(8px);
+            // filter: blur(8px);
+            // -webkit-filter: blur(8px);
     
             /* Full height */
             width: 100%;
-            height: 120vh;
+            height: 160vh;
+
+            .PROFESSIONAL{
+                position: fixed;
+                top: 90rem; right: 50%;
+                transform: translate(50%, -50%);
+                width: 50rem;
+                outline: 1px solid rgb(255, 255, 255);
+                color: #ffe4e4;
+                padding: 0.5rem;
+                // background-color: #ffe4e4;
+                h1{
+                    font-size: 6rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+            }
         }
         .banner3{
             /* The image used */
-            background-image: url("/img/view6.jpg");
+            background-image: url("/img/view1.jpg");
         
             /* Center and scale the image nicely */
             background-position: center;
@@ -81,49 +145,21 @@ body {
             background-size: cover;
     
             /* Add the blur effect */
-            filter: blur(8px);
-            -webkit-filter: blur(8px);
+            // filter: blur(8px);
+            // -webkit-filter: blur(8px);
     
             /* Full height */
             width: 100%;
             height: 90vh;
         }
     }
-
-    
-    .header {
-        display: flex;
-        height: 4rem;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(71, 88, 126);
-
-        a {
-            margin: 0 2rem;
-            font-size: larger;
-            text-decoration: none;
-            color: transparent;
-            background: #ffe4e4;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            // text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
-
-            &:hover {
-                color: white;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
-            }
-        }
-    }
+   
 
     .footer {
         display: flex;
         height: 5rem;
         justify-content: center;
         align-items: center;
-        background-color: rgb(71, 88, 126);
+        background-color: rgb(44, 48, 49);
     }
 }
