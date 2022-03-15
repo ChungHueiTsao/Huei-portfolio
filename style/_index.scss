@@ -1,28 +1,102 @@
 * {
     margin: 0;
     padding: 0;
-    outline: 1px solid black;
+    // outline: 1px solid black;
 }
 
 body {
-    // position: relative;
     margin: 0 auto;
-    width: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     font-weight: bolder;
-    background-image: url('/img/view3.jpg');
-    background-size:cover;
 }
 
 
 .index {
+    .banner{
+        filter: grayscale(70%);
+        -webkit-filter: grayscale(70%);
+
+        .banner1{
+            /* The image used */
+            background-image: url("/img/view1.jpg");
+        
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+            /* Add the blur effect */
+            // filter: blur(8px);
+            // -webkit-filter: blur(8px);
+    
+            /* Full height */
+            width: 100%;
+            height: 100vh;
+        }
+        .banner2{
+            /* The image used */
+            background-image: url("/img/view9.jpg");
+        
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+    
+            /* Full height */
+            width: 100%;
+            height: 120vh;
+        }
+        .banner3{
+            /* The image used */
+            background-image: url("/img/view6.jpg");
+        
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+            /* Add the blur effect */
+            // filter: blur(8px);
+            // -webkit-filter: blur(8px);
+    
+            /* Full height */
+            width: 100%;
+            height: 200vh;
+        }
+        .banner4{
+            /* The image used */
+            background-image: url("/img/view9.jpg");
+        
+            /* Center and scale the image nicely */
+            background-position:bottom;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+    
+            /* Full height */
+            width: 100%;
+            height: 90vh;
+        }
+    }
+
     
     .header {
         display: flex;
         height: 4rem;
         justify-content: center;
         align-items: center;
-        background-color: rgb(116, 93, 79);
+        background-color: rgb(71, 88, 126);
 
         a {
             margin: 0 2rem;
@@ -45,37 +119,11 @@ body {
         }
     }
 
-
-    .banner{
-        .banner1, .banner2 {
-            // z-index: 2;
-            background: no-repeat;
-            background-size: cover;
-            background-position-y: center;
-        }
-        .banner1{
-            // position: sticky;
-            width: 100%;
-            height: 50rem;
-            background-image: url('/img/view4.jpg');
-        }
-        .banner2{
-            position: sticky;
-            width: 100%;
-            top: 100rem;
-            margin-top: 30rem;
-            margin-bottom: 35rem;
-            height: 100rem;
-            background-image: url('/img/view2.jpg');
-        }
-    }
-
-
-    .footer{
+    .footer {
         display: flex;
         height: 5rem;
         justify-content: center;
         align-items: center;
-        background-color: rgb(116, 93, 79);
+        background-color: rgb(71, 88, 126);
     }
 }
