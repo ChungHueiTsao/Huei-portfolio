@@ -12,154 +12,435 @@ body {
 
 
 .index {
-    // position: relative;
+    user-select: none;
 
     .header {
         display: flex;
         height: 4rem;
-        justify-content: center;
         align-items: center;
-        background-color: rgb(44, 48, 49);
+        background-color: #284d28c5;
+        
+        .logo{
+            margin-left: 2rem;
+            font-size: 3rem;
+            // font-family: 'Satisfy', cursive;
+            -webkit-text-stroke: 1px rgb(255, 255, 254);
+            -webkit-text-fill-color: transparent;
+        }
 
-        a {
-            margin: 0 2rem;
-            font-size: larger;
-            text-decoration: none;
-            color: rgb(192, 192, 192);
-            background: #ffe4e4;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            // text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
-
-            &:hover {
-                color: rgb(255, 255, 255);
+        .title{
+            margin: 0 auto;
+            
+            a {
+                margin: 0 2rem;
+                padding-left: 0.5rem;
+                font-size: larger;
+                text-decoration: none;
+                border-left: 3px solid rgba(39, 66, 46, 0.747);
+                color: rgb(192, 192, 192);
+                background: #ffe4e4;
                 -webkit-background-clip: text;
                 -moz-background-clip: text;
                 background-clip: text;
+                // text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+    
+                &:hover {
+                    color: rgb(255, 255, 255);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    transition: 500ms;
+                    // font-size: 1.3rem;
+                }
             }
         }
     }
 
-    .banner{
-        // position: relative;
+    //---------------背景圖---------------------
+    .banner {
+        /* The banner filter */
+        // filter:invert(50%);
         filter: grayscale(50%);
         -webkit-filter: grayscale(50%);
         width: 100%;
 
-        .banner1{
+        .banner1 {
             /* The image used */
-            background-image: url("/img/view6.jpg");
-        
+            background-image: url("/img/coffee4.jpg");
+            // background-image: url("/img/view6.jpg");
+
             /* Center and scale the image nicely */
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
-    
+
             /* Add the blur effect */
             // filter: blur(8px);
             // -webkit-filter: blur(8px);
-    
+
             /* Full height */
             width: 100%;
-            height: 170vh;
+            height: 95rem;
 
-            .HOME{
-                position: fixed;
-                z-index: 3;
-                // display: flex;
-                // justify-content: center;
-                top: 60rem; right: 50%;
-                transform: translate(50%, -50%);
-                // margin-left: 20rem;
-                width: 50rem;
-                height: 40rem;
-                background-color: #314366;
-                box-shadow: rgba(10, 9, 9, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-            }
 
         }
-        .banner2{
+
+        .banner2 {
             position: relative;
             /* The image used */
-            background-image: url("/img/view9.jpg");
-        
+            background-image: url("/img/coffee2.jpg");
+
             /* Center and scale the image nicely */
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
-    
+
             /* Add the blur effect */
             // filter: blur(8px);
             // -webkit-filter: blur(8px);
-    
+
             /* Full height */
             width: 100%;
-            height: 160vh;
-
-            .PROFESSIONAL{
-                position: fixed;
-                top: 90rem; right: 50%;
-                transform: translate(50%, -50%);
-                width: 50rem;
-                outline: 1px solid rgb(255, 255, 255);
-                color: #ffe4e4;
-                padding: 0.5rem;
-                // background-color: #ffe4e4;
-                h1{
-                    font-size: 6rem;
-                }
-                p{
-                    font-size: 1.5rem;
-                }
-            }
+            height: 170rem;
         }
-        .banner3{
+
+        .banner3 {
             /* The image used */
-            background-image: url("/img/view1.jpg");
-        
+            background-image: url("/img/coffee6.jpg");
+
             /* Center and scale the image nicely */
             background-position: center;
             background-attachment: scroll;
             background-repeat: no-repeat;
             background-size: cover;
-    
+
             /* Add the blur effect */
             // filter: blur(8px);
             // -webkit-filter: blur(8px);
-    
+
             /* Full height */
             width: 100%;
             height: 200vh;
         }
-        .banner4{
+
+        .banner4 {
             /* The image used */
-            background-image: url("/img/view9.jpg");
-        
+            background-image: url("/img/coffee8.jpg");
+
             /* Center and scale the image nicely */
-            background-position:bottom;
+            background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
-    
+
             /* Add the blur effect */
             // filter: blur(8px);
             // -webkit-filter: blur(8px);
-    
+
             /* Full height */
             width: 100%;
             height: 90vh;
         }
     }
-   
+
+
+    //---------------內文-----------------------
+
+    //-------------banner1----------------
+    .HOME {
+        position: fixed;
+        display: flex;
+        z-index: 3;
+        top: 27rem;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 70rem;
+        height: 38rem;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        background-color: #487448cc;
+
+        // outline: 1px solid rgb(255, 255, 255);
+        h1 {
+            padding: 1rem;
+            user-select: none;
+            color: #ffe4e4;
+            font-size: 10rem;
+        }
+        
+        span {
+            padding: 1rem;
+            -webkit-text-stroke: 1.5px rgb(255, 255, 254);
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pic {
+            background-image: url(/img/huei.jpg);
+            background-size:cover;
+            background-position: 27% 0px;
+            width: 50rem;
+            height: 100%;
+            border-top-right-radius: 30px;
+            border-left: 5px solid rgb(255, 255, 255);
+        }
+    }
+
+    .introduce {
+        position: fixed;
+        z-index: 3;
+        padding: 3rem 4rem;
+        top: 95rem;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 48rem;
+        height: 40rem;
+        background-color: #487448f3;
+        box-shadow: rgba(10, 9, 9, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        
+        .title{
+            // font-family: 'Satisfy', cursive;
+            -webkit-text-stroke: 1px rgb(255, 255, 254);
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 7rem;
+            color: #ffe4e4;
+            user-select: none;
+        }
+        
+        .container{
+            color: #ffe4e4;
+            user-select: none;
+            font-weight: 500;
+            ul li{
+                list-style: none;
+                font-size: 1.3rem;
+                font-weight: bold;
+                margin-top: 0.5rem;
+            }
+            p{
+                margin: 2rem auto;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+
+    //--------------banner2----------------
+    //--------------01----------------
+    .PROFESSIONAL {
+        position: fixed;
+        top: 140rem;
+        right: 50%;
+        width: 50rem;
+        height: 18rem;
+        padding: 1rem;
+        transform: translate(50%, -50%);
+        background-color: #2a442ad3;
+        outline: 1px solid rgb(255, 255, 255);
+        color: #ffe4e4;
+
+        h1 {font-size: 6rem;}
+        p {font-size: 1.5rem;}
+        
+        //-------------------進度條-------------------------
+
+
+
+
+    }
+
+    // ---------banner3------------
+    // ------------02------------
+    .portfolio{
+        position: fixed;
+        top: 265rem;
+        right: 50%;
+        width: 50rem;
+        height: 18rem;
+        padding: 1rem;
+        transform: translate(50%, -50%);
+        background-color: #2a442ad3;
+        outline: 1px solid rgb(255, 255, 255);
+        color: #ffe4e4;
+
+        h1 {font-size: 6rem;}
+        p {font-size: 1.5rem;}
+
+    }
+
+    // -------------03------------
+    .experience{
+        position: fixed;
+        top: 380rem;
+        right: 50%;
+        width: 50rem;
+        height: 18rem;
+        padding: 1rem;
+        transform: translate(50%, -50%);
+        background-color: #2a442ad3;
+        outline: 1px solid rgb(255, 255, 255);
+        color: #ffe4e4;
+        
+        h1 {font-size: 6rem;}
+        p {font-size: 1.5rem;}
+
+        //-------------------進度條-------------------------
+        #progressBar{
+            position: relative;
+            margin: 30rem 0 0 0 ;
+            top: 20rem;
+            right: 12rem;
+            width: 70rem;
+            height: 50px;
+            transform: rotate( 90deg);
+            
+        }
+        #progressBar div{
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            top:50%;
+            left: 0;
+            margin-top:-20px;
+            background: #ccc;
+        }
+        #progressBar div p{
+            position: absolute;
+            display: inline-block;
+            background: green;
+            height: 10px;
+            width: 100%;
+            -webkit-animation:bgLoad 5.5s linear;
+        }
+        @-webkit-keyframes bgLoad{
+            0%{
+                width: 0%;
+            }
+            18.18%,27.27%{
+                width:25%;
+            }
+            45.45%,54.54%{
+                width: 50%;
+            }
+            72.72%,81.81%{
+                width: 75%;
+            }
+            100%{
+                width:100%;
+            }
+        }
+        #progressBar>p{
+            position: absolute;
+            top:0;
+            margin-top: -10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ccc;
+            margin-left: -20px;
+            color:#fff;
+        }
+        @-webkit-keyframes circleLoad_1{
+            0%,66.66%{
+                background: #ccc;
+            }
+            100%{
+                background:green;
+            }
+        }
+        @-webkit-keyframes circleLoad_2{
+            0%,83.34%{
+                background: #ccc;
+            }
+            100%{
+                background:green;
+            }
+        }
+        @-webkit-keyframes circleLoad_3{
+            0%,88.88%{
+                background: #ccc;
+            }
+            100%{
+                background:green;
+            }
+        }
+        @-webkit-keyframes circleLoad_4{
+            0%,91.67%{
+                background: #ccc;
+            }
+            100%{
+                background:green;
+            }
+        }
+        #progressBar p:nth-child(2){
+            left: 0%;background:green;
+        }
+        #progressBar p:nth-child(3){
+            left: 25%;background:green;
+            -webkit-animation:circleLoad_1 1.5s ease-in;
+        }
+        #progressBar p:nth-child(4){
+            left: 50%;background:green;
+            -webkit-animation:circleLoad_2 3s ease-in;
+        }
+        #progressBar p:nth-child(5){
+            left: 75%;background:green;
+            -webkit-animation:circleLoad_3 4.5s ease-in;
+        }
+        #progressBar p:nth-child(6){
+            left: 100%;background:green;
+            -webkit-animation:circleLoad_4 6s ease-in;
+        }
+
+    }
+
+
+    // ---------banner4------------
+    // ------------04------------
+    .contact{
+        position: fixed;
+        display: flex;
+        top: 500rem;
+        right: 50%;
+        width: 50rem;
+        height: 18rem;
+        padding: 1rem;
+        transform: translate(50%, -50%);
+        background-color: #2a442ad3;
+        outline: 1px solid rgb(255, 255, 255);
+        color: #ffe4e4;
+        
+        .container{
+            width: 50%;
+            h3 {font-size: 6rem;}
+            p {font-size: 1.5rem;}
+        }
+        
+
+        .inputInform{
+            outline: 1px solid black;
+            width: 50%;
+            box-sizing: border-box;
+            // display: flex;
+            #name{width: 50%;}
+            #phone{width: 50%;}
+            #email{width: 100%;}
+            #message{width: 100%;}
+
+        }
+
+    }
+
+    //---------------內文-----------------------
+
 
     .footer {
         display: flex;
         height: 5rem;
         justify-content: center;
         align-items: center;
-        background-color: rgb(44, 48, 49);
+        background-color: #284d28c5;
     }
 }

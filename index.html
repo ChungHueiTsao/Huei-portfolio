@@ -5,37 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Satisfy&display=swap" rel="stylesheet">
     <title>Huei Portfolio</title>
 </head>
 <body>
     <section class="index">
         
         <div class="header">
-            <a href="#">HOME</a>
-            <a href="#">PROFESSIONAL</a>
-            <a href="#">PORTFOLIO</a>
-            <a href="#">Experience</a>
-            <a href="#">CONTACT</a>
+            <div class="logo">H</div>
+            <div class="title">
+                <a href="#">HOME</a>
+                <a href="#">PROFESSIONAL</a>
+                <a href="#">PORTFOLIO</a>
+                <a href="#">Experience</a>
+                <a href="#">CONTACT</a>
+            </div>
         </div>
         
-        <div class="professional"></div>
-        <div class="portfolio"></div>
-        <div class="experience"></div>
-        <div class="contact"></div>
+        
+        
         
         
         <div class="banner">
             <div class="banner1">
-                <div class="HOME"></div>
+
+                <!-- I'm CHUNG HUEI -->
+                <div class="HOME">
+                    <div class="text">
+                        <h1>I'M</h1>
+                        <h1>C<span>H</span>UNG <span>H</span>UEI.</h1>
+                    </div>
+                    <div class="pic"></div>   
+                </div>
+
+                <!-- 自我簡介 -->
+                <div class="introduce">
+                    <div class="title">H</div>
+                    <div class="container">
+                        <ul>
+                            <li>1. 樂於探索各領域新知。</li>
+                            <li>2. 主動了解不清楚的事物。</li>
+                            <li>3. 喜歡debug及成功運行程式的快感。</li>
+                            <li>4. 善於表達、溝通，及團隊合作。</li>
+                        </ul>
+                        
+                        <p>
+                            在平面設計系的四年及在資策會所學的前端技能合併應用，對於我想當一位前端工程師來說是相輔相成。
+                            餐飲業的五年經歷，從工讀生到管理職，不可或缺的就是跟同事的相處與溝通協調，這方面的特點也能在前端工程師的工作中，增加對於同事、團隊，或者客戶的溝通效率。
+                            程式是學無止盡的，在資策會下課後，練習coding時，經常會發現新的標籤、新的套件、新的觀念及想法。也是在找資料的期間，幸運地加入了一個有3千多位前端相關經驗的Line群組，每天都能在群組裡吸收資深工程師的coding方法及觀念。
+                            從設計轉換到前端工程師的跑道雖然艱難，也還有許多不清楚的事物，但憑藉著樂於挑戰的個性，及與團隊有效率的溝通，相信能快速的在前端工程師的路上立足。
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
+
             <div class="banner2">
+                <!-- 01 -->
                 <div class="PROFESSIONAL">
                     <h1>01 PROFESSIONAL</h1>
                     <p>MY KNOWLEDGE LEVEL IN SOFTWARE</p>
+
+                    <!-- 進度條 -->
+                    
+                    
                 </div>
             </div>
-            <div class="banner3"></div>
-            <div class="banner4"></div>
+
+            <div class="banner3">
+                <!-- 02 -->
+                <div class="portfolio">
+                    <h1>02 PORTFOLIO</h1>
+                    <p>MY LATEST WORK.</p>
+                </div>
+
+                <!-- 03 -->
+                <div class="experience">
+                    <h1>03 Experience</h1>
+
+                    <!-- 進度條 -->
+                    <div id="progressBar">
+                        <div>
+                          <p></p>
+                        </div>
+                        <!-- 五個圓 -->
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                   </div>
+                </div>
+            </div>
+
+            <div class="banner4">
+                <!-- 04 -->
+                <div class="contact">
+                    <div class="container">
+                        <h3>CONTACT</h3>
+                        <p>I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                    </div>
+                    <form class="inputInform">
+                        <input type="text" id="name" name="name" placeholder="Name" required/>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone" required/>
+                        <input type="email" id="email" name="email" placeholder="Email" required/>
+                        <textarea name="Message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    </form>
+                </div>
+            </div>
         </div>
         
         <div class="footer"></div>
