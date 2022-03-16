@@ -18,7 +18,7 @@ body {
         display: flex;
         height: 4rem;
         align-items: center;
-        background-color: #284d28c5;
+        background-color: #203320c5;
         
         .logo{
             margin-left: 2rem;
@@ -177,7 +177,7 @@ body {
         }
 
         .pic {
-            background-image: url(/img/huei.jpg);
+            background-image: url("../img/huei.jpg");
             background-size:cover;
             background-position: 27% 0px;
             width: 50rem;
@@ -459,6 +459,6 @@ body {
         height: 5rem;
         justify-content: center;
         align-items: center;
-        background-color: #284d28c5;
+        background-color: #203320c5;
     }
 }

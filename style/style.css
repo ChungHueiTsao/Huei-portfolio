@@ -24,7 +24,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #284d28c5;
+  background-color: #203320c5;
 }
 
 .index .header .logo {
@@ -156,7 +156,7 @@ body {
 }
 
 .index .HOME .pic {
-  background-image: url(/img/huei.jpg);
+  background-image: url("../img/huei.jpg");
   background-size: cover;
   background-position: 27% 0px;
   width: 50rem;
@@ -493,6 +493,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #284d28c5;
+  background-color: #203320c5;
 }
 /*# sourceMappingURL=style.css.map */
