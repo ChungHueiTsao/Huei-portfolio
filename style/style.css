@@ -222,6 +222,7 @@ body {
   padding: 1rem;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
+  background-color: #2a442ad3;
   outline: 1px solid white;
   color: #ffe4e4;
 }
@@ -265,7 +266,7 @@ body {
 
 .index .portfolio {
   position: fixed;
-  top: 265rem;
+  top: 225rem;
   right: 50%;
   width: 50rem;
   height: 18rem;
