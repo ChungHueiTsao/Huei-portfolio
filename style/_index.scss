@@ -103,7 +103,7 @@ body {
 
             /* Full height */
             width: 100%;
-            height: 170rem;
+            height: 100rem;
         }
 
         .banner3 {
@@ -122,7 +122,7 @@ body {
 
             /* Full height */
             width: 100%;
-            height: 200vh;
+            height: 225rem;
         }
 
         .banner4 {
@@ -141,7 +141,7 @@ body {
 
             /* Full height */
             width: 100%;
-            height: 90vh;
+            height: 90rem;
         }
     }
 
@@ -153,11 +153,11 @@ body {
         position: fixed;
         display: flex;
         z-index: 3;
-        top: 27rem;
+        top: 30rem;
         right: 50%;
         transform: translate(50%, -50%);
-        width: 70rem;
-        height: 38rem;
+        width: 72rem;
+        height: 44rem;
         border-top-right-radius: 30px;
         border-bottom-left-radius: 30px;
         background-color: #487448cc;
@@ -190,12 +190,12 @@ body {
     .introduce {
         position: fixed;
         z-index: 3;
-        padding: 3rem 4rem;
+        padding: 5rem 4rem;
         top: 95rem;
         right: 50%;
         transform: translate(50%, -50%);
-        width: 48rem;
-        height: 40rem;
+        width: 50rem;
+        height: 43rem;
         background-color: #487448f3;
         box-shadow: rgba(10, 9, 9, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         
@@ -234,10 +234,10 @@ body {
         top: 140rem;
         right: 50%;
         width: 50rem;
-        height: 18rem;
+        height: 20rem;
         padding: 1rem;
         transform: translate(50%, -50%);
-        background-color: #2a442ad3;
+        // background-color: #2a442ad3;
         outline: 1px solid rgb(255, 255, 255);
         color: #ffe4e4;
 
@@ -245,8 +245,27 @@ body {
         p {font-size: 1.5rem;}
         
         //-------------------進度條-------------------------
+        #progressBar{
+            margin-top: 7rem;
+            padding: 2rem 2rem 0 ;
+            .item{
+                // width: 30rem;
+                display: flex;
+                width: 100%;
+                height: 5rem;
+                .label{
+                    flex-grow: 1;
+                    width:  18rem;
+                    text-align: left;
+                    font-size: 3rem;
+                }
+                .bar{
+                    flex-grow: 9;
+                    width: 13rem;
+                }
+            }
 
-
+        }
 
 
     }
@@ -290,7 +309,7 @@ body {
         #progressBar{
             position: relative;
             margin: 30rem 0 0 0 ;
-            top: 20rem;
+            top: 25rem;
             right: 12rem;
             width: 70rem;
             height: 50px;
@@ -304,12 +323,12 @@ body {
             top:50%;
             left: 0;
             margin-top:-20px;
-            background: #ccc;
+            background: rgb(255, 255, 255);
         }
         #progressBar div p{
             position: absolute;
             display: inline-block;
-            background: green;
+            background: rgb(78, 158, 78);
             height: 10px;
             width: 100%;
             -webkit-animation:bgLoad 5.5s linear;
@@ -338,59 +357,59 @@ body {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: #ccc;
+            background: rgb(255, 255, 255);
             margin-left: -20px;
             color:#fff;
         }
         @-webkit-keyframes circleLoad_1{
             0%,66.66%{
-                background: #ccc;
+                background: rgb(255, 255, 255);
             }
             100%{
-                background:green;
+                background:rgb(78, 158, 78);
             }
         }
         @-webkit-keyframes circleLoad_2{
             0%,83.34%{
-                background: #ccc;
+                background: rgb(255, 255, 255);
             }
             100%{
-                background:green;
+                background:rgb(78, 158, 78);
             }
         }
         @-webkit-keyframes circleLoad_3{
             0%,88.88%{
-                background: #ccc;
+                background: rgb(255, 255, 255);
             }
             100%{
-                background:green;
+                background:rgb(78, 158, 78);
             }
         }
         @-webkit-keyframes circleLoad_4{
             0%,91.67%{
-                background: #ccc;
+                background: rgb(255, 255, 255);
             }
             100%{
-                background:green;
+                background:rgb(78, 158, 78);
             }
         }
         #progressBar p:nth-child(2){
-            left: 0%;background:green;
+            left: 0%;background:rgb(78, 158, 78);
         }
         #progressBar p:nth-child(3){
-            left: 25%;background:green;
+            left: 25%;background:rgb(78, 158, 78);
             -webkit-animation:circleLoad_1 1.5s ease-in;
         }
         #progressBar p:nth-child(4){
-            left: 50%;background:green;
+            left: 50%;background:rgb(78, 158, 78);
             -webkit-animation:circleLoad_2 3s ease-in;
         }
         #progressBar p:nth-child(5){
-            left: 75%;background:green;
+            left: 75%;background:rgb(78, 158, 78);
             -webkit-animation:circleLoad_3 4.5s ease-in;
         }
         #progressBar p:nth-child(6){
-            left: 100%;background:green;
+            left: 100%;background:rgb(78, 158, 78);
             -webkit-animation:circleLoad_4 6s ease-in;
         }
 
@@ -402,14 +421,14 @@ body {
     .contact{
         position: fixed;
         display: flex;
-        top: 500rem;
+        top: 510rem;
         right: 50%;
         width: 50rem;
-        height: 18rem;
+        height: 24rem;
         padding: 1rem;
         transform: translate(50%, -50%);
         background-color: #2a442ad3;
-        outline: 1px solid rgb(255, 255, 255);
+        // outline: 1px solid rgb(255, 255, 255);
         color: #ffe4e4;
         
         .container{
@@ -420,7 +439,6 @@ body {
         
 
         .inputInform{
-            outline: 1px solid black;
             width: 50%;
             box-sizing: border-box;
             // display: flex;

@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Font-Family -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Satisfy&display=swap" rel="stylesheet">
+    
+    <!-- Semantic UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
     <title>Huei Portfolio</title>
 </head>
 <body>
@@ -23,10 +29,7 @@
                 <a href="#">CONTACT</a>
             </div>
         </div>
-        
-        
-        
-        
+
         
         <div class="banner">
             <div class="banner1">
@@ -70,7 +73,29 @@
                     <p>MY KNOWLEDGE LEVEL IN SOFTWARE</p>
 
                     <!-- 進度條 -->
-                    
+                    <div class="ui green active progress" id="progressBar">
+                        <div class="item">
+                            <div class="label">HTML</div>
+                            <div class="bar"></div>
+                        </div>
+
+                        <div class="item">
+                            <div class="label">CSS</div>
+                            <div class="bar"></div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="label">Javascript</div>
+                            <div class="bar"></div>
+                        </div>
+
+                        <div class="item">
+                            <div class="label">jQuery</div>
+                            <div class="bar">
+                                <!-- <div class="progress"></div> -->
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
@@ -122,5 +147,11 @@
 
     </div>
     </section>
+
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
 </body>
 </html>
