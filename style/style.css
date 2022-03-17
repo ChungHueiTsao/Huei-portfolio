@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -16,33 +17,57 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  /*在PC上隱藏漢堡選單*/
+}
+
+.index #topIcon {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  right: 5px;
+  bottom: 10px;
+  z-index: 5;
+  color: #346928;
+}
+
+.index #topIcon:hover {
+  color: #64ac54;
 }
 
 .index .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 4rem;
+  margin: 0 auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 4rem;
   background-color: #122212c5;
+  position: relative;
 }
 
-.index .header .logo {
+.index .logo {
   margin-left: 2rem;
   font-size: 3rem;
   -webkit-text-stroke: 1px #fffffe;
   -webkit-text-fill-color: transparent;
 }
 
-.index .header .title {
+.index .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 auto;
 }
 
-.index .header .title a {
+.index .menu li {
+  list-style: none;
+}
+
+.index .menu li a {
+  padding: 0 0 0 0.5rem;
   margin: 0 2rem;
-  padding-left: 0.5rem;
   font-size: 1.3rem;
   text-decoration: none;
   border-left: 3px solid rgba(39, 66, 46, 0.747);
@@ -52,7 +77,7 @@ body {
   background-clip: text;
 }
 
-.index .header .title a:hover {
+.index .menu li a:hover {
   font-size: 1.4rem;
   color: white;
   -webkit-background-clip: text;
@@ -60,6 +85,79 @@ body {
   -webkit-transition: 200ms;
   transition: 200ms;
   border-left: 3px solid rgba(121, 231, 150, 0.747);
+}
+
+.index .showmenu {
+  display: none;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 890px) {
+  .index {
+    /*jQ點擊後動態在 body 加上 class */
+  }
+  .index .container {
+    display: inline;
+    cursor: pointer;
+    position: fixed;
+    width: 4rem;
+    right: 1rem;
+  }
+  .index .bar1,
+  .index .bar2,
+  .index .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #8daf92;
+    margin: 6px 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .index .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .index .change .bar2 {
+    opacity: 0;
+  }
+  .index .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  .index .menu {
+    display: inline-block;
+    /*隱藏選單開始*/
+    /*絕對定位疊在網頁上*/
+    position: absolute;
+    width: 100%;
+    top: 4rem;
+    background: #2d442d;
+    z-index: 100;
+  }
+  .index .menu li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 2rem auto;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #475f45;
+  }
+  .index .menu li a {
+    font-size: 1.5rem;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-left: 3px solid rgba(140, 148, 144, 0.747);
+  }
+  .index .menu li a:hover {
+    font-size: 2rem;
+    color: #fff;
+  }
+  .index .menu-show .menu {
+    max-height: 500px;
+  }
 }
 
 .index .banner {
@@ -142,6 +240,13 @@ body {
   background-color: #487448cc;
 }
 
+@media screen and (max-width: 890px) {
+  .index .HOME {
+    width: 80%;
+    display: inline;
+  }
+}
+
 .index .HOME h1 {
   padding: 1rem;
   -webkit-user-select: none;
@@ -150,6 +255,16 @@ body {
           user-select: none;
   color: #ffe4e4;
   font-size: 10rem;
+}
+
+@media screen and (max-width: 890px) {
+  .index .HOME h1 {
+    font-size: 5rem;
+    margin-left: 2rem;
+  }
+  .index .HOME h1:first-child {
+    margin-bottom: -4rem;
+  }
 }
 
 .index .HOME span {
@@ -168,25 +283,49 @@ body {
   border-left: 5px solid white;
 }
 
+@media screen and (max-width: 890px) {
+  .index .HOME .pic {
+    width: 100%;
+    border-top: 5px solid white;
+    border-left: 0;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 30px;
+  }
+}
+
 .index .introduce {
   position: fixed;
   z-index: 3;
-  padding: 4rem 4rem;
+  padding: 5rem 2rem 2rem 2rem;
   top: 95rem;
   right: 50%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  width: 50rem;
-  height: 43rem;
+  width: 60rem;
+  height: 45rem;
   background-color: #487448f3;
   -webkit-box-shadow: rgba(10, 9, 9, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(10, 9, 9, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+@media screen and (max-width: 890px) {
+  .index .introduce {
+    width: 80%;
+    height: 49rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .index .introduce {
+    margin-top: 2rem;
+  }
 }
 
 .index .introduce .title {
   -webkit-text-stroke: 1px #fffffe;
   -webkit-text-fill-color: transparent;
   text-align: center;
+  height: 4rem;
   font-size: 7rem;
   color: #ffe4e4;
   -webkit-user-select: none;
@@ -204,6 +343,13 @@ body {
   font-weight: 500;
 }
 
+@media screen and (max-width: 890px) {
+  .index .introduce .container {
+    padding-right: 2rem;
+    width: 90%;
+  }
+}
+
 .index .introduce .container ul li {
   list-style: none;
   font-size: 1.3rem;
@@ -213,7 +359,13 @@ body {
 
 .index .introduce .container p {
   margin: 2rem auto;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 890px) {
+  .index .introduce .container p {
+    margin-bottom: 2rem;
+  }
 }
 
 .index .PROFESSIONAL {
@@ -235,6 +387,25 @@ body {
 
 .index .PROFESSIONAL p {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 890px) {
+  .index .PROFESSIONAL {
+    width: 60%;
+  }
+  .index .PROFESSIONAL h1 {
+    margin: 0 1rem 0 0;
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .index .PROFESSIONAL {
+    width: 40%;
+  }
+  .index .PROFESSIONAL h1 {
+    font-size: 3rem;
+  }
 }
 
 .index .PROFESSIONAL #progressBar {
@@ -374,6 +545,17 @@ body {
   width: 50%;
 }
 
+.index .experience .container p {
+  margin-top: -1.5rem;
+  font-size: 1.2rem;
+}
+
+.index .experience .container li {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
 .index .experience .container::after {
   content: '';
   position: absolute;
@@ -433,36 +615,6 @@ body {
   border-radius: 6px;
 }
 
-@media screen and (max-width: 600px) {
-  .index .experience {
-    /* Place the timelime to the left */
-    /* Full-width containers */
-    /* Make sure that all arrows are pointing leftwards */
-    /* Make sure all circles are at the same spot */
-    /* Make all right containers behave like the left ones */
-  }
-  .index .experience .timeline::after {
-    left: 31px;
-  }
-  .index .experience .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-  .index .experience .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-  .index .experience .left::after, .index .experience .right::after {
-    left: 15px;
-  }
-  .index .experience .right {
-    left: 0%;
-  }
-}
-
 .index .contact {
   position: fixed;
   display: -webkit-box;
@@ -479,6 +631,12 @@ body {
   color: #ffe4e4;
 }
 
+@media screen and (max-width: 890px) {
+  .index .contact {
+    height: 55rem;
+  }
+}
+
 .index .contact .container {
   width: 50%;
 }
@@ -489,6 +647,14 @@ body {
 
 .index .contact .container p {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 890px) {
+  .index .contact .container {
+    width: 50%;
+    left: 1rem;
+    margin-top: -3rem;
+  }
 }
 
 .index .contact .inputInform {
@@ -518,6 +684,16 @@ body {
 
 .index .contact .inputInform #textarea {
   margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 890px) {
+  .index .contact .inputInform {
+    width: 50%;
+    margin: 17rem auto;
+  }
+  .index .contact .inputInform .btn {
+    width: 100%;
+  }
 }
 
 .index .footer {
