@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -24,7 +26,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #203320c5;
+  background-color: #122212c5;
 }
 
 .index .header .logo {
@@ -41,7 +43,7 @@ body {
 .index .header .title a {
   margin: 0 2rem;
   padding-left: 0.5rem;
-  font-size: larger;
+  font-size: 1.3rem;
   text-decoration: none;
   border-left: 3px solid rgba(39, 66, 46, 0.747);
   color: silver;
@@ -51,11 +53,13 @@ body {
 }
 
 .index .header .title a:hover {
+  font-size: 1.4rem;
   color: white;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-transition: 500ms;
-  transition: 500ms;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  border-left: 3px solid rgba(121, 231, 150, 0.747);
 }
 
 .index .banner {
@@ -91,7 +95,7 @@ body {
   /* Add the blur effect */
   /* Full height */
   width: 100%;
-  height: 100rem;
+  height: 105rem;
 }
 
 .index .banner .banner3 {
@@ -102,10 +106,9 @@ body {
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
-  /* Add the blur effect */
   /* Full height */
   width: 100%;
-  height: 225rem;
+  height: 243rem;
 }
 
 .index .banner .banner4 {
@@ -119,7 +122,7 @@ body {
   /* Add the blur effect */
   /* Full height */
   width: 100%;
-  height: 90rem;
+  height: 30rem;
 }
 
 .index .HOME {
@@ -168,7 +171,7 @@ body {
 .index .introduce {
   position: fixed;
   z-index: 3;
-  padding: 5rem 4rem;
+  padding: 4rem 4rem;
   top: 95rem;
   right: 50%;
   -webkit-transform: translate(50%, -50%);
@@ -222,8 +225,7 @@ body {
   padding: 1rem;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  background-color: #2a442ad3;
-  outline: 1px solid white;
+  outline: 3px solid white;
   color: #ffe4e4;
 }
 
@@ -237,7 +239,10 @@ body {
 
 .index .PROFESSIONAL #progressBar {
   margin-top: 7rem;
-  padding: 2rem 2rem 0;
+  padding: 3rem 2rem;
+  width: 100%;
+  height: 32rem;
+  background-color: rgba(97, 97, 97, 0.233);
 }
 
 .index .PROFESSIONAL #progressBar .item {
@@ -266,15 +271,14 @@ body {
 
 .index .portfolio {
   position: fixed;
-  top: 225rem;
+  top: 220rem;
   right: 50%;
   width: 50rem;
   height: 18rem;
   padding: 1rem;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  background-color: #2a442ad3;
-  outline: 1px solid white;
+  outline: 3px solid white;
   color: #ffe4e4;
 }
 
@@ -286,18 +290,49 @@ body {
   font-size: 1.5rem;
 }
 
-.index .experience {
+.index #carouselExampleControls {
   position: fixed;
-  top: 380rem;
+  top: 253rem;
   right: 50%;
-  width: 50rem;
-  height: 18rem;
+  width: 60rem;
+  height: 50rem;
   padding: 1rem;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  background-color: #2a442ad3;
-  outline: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.index #carouselExampleControls .carousel-inner {
+  width: 100%;
+}
+
+.index .experience {
+  position: fixed;
+  top: 307rem;
+  right: 50%;
+  width: 50rem;
+  height: 10rem;
+  padding: 1rem;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  outline: 3px solid white;
   color: #ffe4e4;
+  /* The actual timeline (the vertical ruler) */
+  /* The actual timeline (the vertical ruler) */
+  /* Container around content */
+  /* The circles on the timeline */
+  /* Place the container to the left */
+  /* Place the container to the right */
+  /* Add arrows to the left container (pointing right) */
+  /* Add arrows to the right container (pointing left) */
+  /* Fix the circle for containers on the right side */
+  /* The actual content */
+  /* Media queries - Responsive timeline on screens less than 600px wide */
 }
 
 .index .experience h1 {
@@ -308,129 +343,124 @@ body {
   font-size: 1.5rem;
 }
 
-.index .experience #progressBar {
+.index .experience .autumn.leaf {
+  width: 6rem;
+  height: 4rem;
+  background-color: aqua;
+}
+
+.index .experience .timeline {
   position: relative;
-  margin: 30rem 0 0 0;
-  top: 25rem;
+  max-width: 1200px;
+  margin: 5rem 0 0 0;
   right: 12rem;
-  width: 70rem;
-  height: 50px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
 }
 
-.index .experience #progressBar div {
-  width: 100%;
-  height: 10px;
+.index .experience .timeline::after {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -20px;
-  background: white;
-}
-
-.index .experience #progressBar div p {
-  position: absolute;
-  display: inline-block;
-  background: #4e9e4e;
-  height: 10px;
-  width: 100%;
-  -webkit-animation: bgLoad 5.5s linear;
-}
-
-@-webkit-keyframes bgLoad {
-  0% {
-    width: 0%;
-  }
-  18.18%, 27.27% {
-    width: 25%;
-  }
-  45.45%, 54.54% {
-    width: 50%;
-  }
-  72.72%, 81.81% {
-    width: 75%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-.index .experience #progressBar > p {
-  position: absolute;
+  width: 6px;
+  background-color: #c5cac7;
   top: 0;
-  margin-top: -10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: white;
-  margin-left: -20px;
-  color: #fff;
-}
-
-@-webkit-keyframes circleLoad_1 {
-  0%, 66.66% {
-    background: white;
-  }
-  100% {
-    background: #4e9e4e;
-  }
-}
-
-@-webkit-keyframes circleLoad_2 {
-  0%, 83.34% {
-    background: white;
-  }
-  100% {
-    background: #4e9e4e;
-  }
-}
-
-@-webkit-keyframes circleLoad_3 {
-  0%, 88.88% {
-    background: white;
-  }
-  100% {
-    background: #4e9e4e;
-  }
-}
-
-@-webkit-keyframes circleLoad_4 {
-  0%, 91.67% {
-    background: white;
-  }
-  100% {
-    background: #4e9e4e;
-  }
-}
-
-.index .experience #progressBar p:nth-child(2) {
-  left: 0%;
-  background: #4e9e4e;
-}
-
-.index .experience #progressBar p:nth-child(3) {
-  left: 25%;
-  background: #4e9e4e;
-  -webkit-animation: circleLoad_1 1.5s ease-in;
-}
-
-.index .experience #progressBar p:nth-child(4) {
-  left: 50%;
-  background: #4e9e4e;
-  -webkit-animation: circleLoad_2 3s ease-in;
-}
-
-.index .experience #progressBar p:nth-child(5) {
+  bottom: 0;
   left: 75%;
-  background: #4e9e4e;
-  -webkit-animation: circleLoad_3 4.5s ease-in;
+  margin-left: -3px;
 }
 
-.index .experience #progressBar p:nth-child(6) {
-  left: 100%;
-  background: #4e9e4e;
-  -webkit-animation: circleLoad_4 6s ease-in;
+.index .experience .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.index .experience .container::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: -15px;
+  background-color: #54b46e;
+  border: 4px solid #3e912c;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.index .experience .left {
+  left: 0;
+}
+
+.index .experience .right {
+  left: 50%;
+}
+
+.index .experience .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #267a42;
+}
+
+.index .experience .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #267a42 transparent transparent;
+}
+
+.index .experience .right::after {
+  left: -16px;
+}
+
+.index .experience .content {
+  width: 18.3rem;
+  padding: 20px 20px;
+  background-color: #267a42;
+  position: relative;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .index .experience {
+    /* Place the timelime to the left */
+    /* Full-width containers */
+    /* Make sure that all arrows are pointing leftwards */
+    /* Make sure all circles are at the same spot */
+    /* Make all right containers behave like the left ones */
+  }
+  .index .experience .timeline::after {
+    left: 31px;
+  }
+  .index .experience .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .index .experience .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .index .experience .left::after, .index .experience .right::after {
+    left: 15px;
+  }
+  .index .experience .right {
+    left: 0%;
+  }
 }
 
 .index .contact {
@@ -438,11 +468,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 510rem;
+  top: 443rem;
   right: 50%;
-  width: 50rem;
-  height: 24rem;
-  padding: 1rem;
+  width: 65rem;
+  height: 38rem;
+  padding: 4rem 2rem;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
   background-color: #2a442ad3;
@@ -463,8 +493,7 @@ body {
 
 .index .contact .inputInform {
   width: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  margin-top: 1rem;
 }
 
 .index .contact .inputInform #name {
@@ -483,6 +512,14 @@ body {
   width: 100%;
 }
 
+.index .contact .inputInform .btn-primary {
+  margin-top: 1rem;
+}
+
+.index .contact .inputInform #textarea {
+  margin-top: 1.5rem;
+}
+
 .index .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -494,6 +531,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #203320c5;
+  background-color: #122212c5;
+}
+
+.index .footer .logo {
+  margin: 0 3rem;
+  font-size: 3rem;
+  -webkit-text-stroke: 1px #fffffe;
+  -webkit-text-fill-color: transparent;
+}
+
+.index .footer span {
+  margin-right: 5rem;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

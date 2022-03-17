@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     // outline: 1px solid black;
 }
 
@@ -18,7 +19,7 @@ body {
         display: flex;
         height: 4rem;
         align-items: center;
-        background-color: #203320c5;
+        background-color: #122212c5;
         
         .logo{
             margin-left: 2rem;
@@ -34,7 +35,7 @@ body {
             a {
                 margin: 0 2rem;
                 padding-left: 0.5rem;
-                font-size: larger;
+                font-size: 1.3rem;
                 text-decoration: none;
                 border-left: 3px solid rgba(39, 66, 46, 0.747);
                 color: rgb(192, 192, 192);
@@ -45,11 +46,14 @@ body {
                 // text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
     
                 &:hover {
+                    font-size: 1.4rem;
                     color: rgb(255, 255, 255);
                     -webkit-background-clip: text;
                     -moz-background-clip: text;
                     background-clip: text;
-                    transition: 500ms;
+                    transition: 200ms;
+
+                    border-left: 3px solid rgba(121, 231, 150, 0.747);
                     // font-size: 1.3rem;
                 }
             }
@@ -103,7 +107,7 @@ body {
 
             /* Full height */
             width: 100%;
-            height: 100rem;
+            height: 105rem;
         }
 
         .banner3 {
@@ -116,13 +120,9 @@ body {
             background-repeat: no-repeat;
             background-size: cover;
 
-            /* Add the blur effect */
-            // filter: blur(8px);
-            // -webkit-filter: blur(8px);
-
             /* Full height */
             width: 100%;
-            height: 225rem;
+            height: 243rem;
         }
 
         .banner4 {
@@ -141,7 +141,7 @@ body {
 
             /* Full height */
             width: 100%;
-            height: 90rem;
+            height: 30rem;
         }
     }
 
@@ -190,7 +190,7 @@ body {
     .introduce {
         position: fixed;
         z-index: 3;
-        padding: 5rem 4rem;
+        padding: 4rem 4rem;
         top: 95rem;
         right: 50%;
         transform: translate(50%, -50%);
@@ -237,8 +237,8 @@ body {
         height: 20rem;
         padding: 1rem;
         transform: translate(50%, -50%);
-        background-color: #2a442ad3;
-        outline: 1px solid rgb(255, 255, 255);
+        // background-color: #2a442ad3;
+        outline: 3px solid rgb(255, 255, 255);
         color: #ffe4e4;
 
         h1 {font-size: 6rem;}
@@ -247,7 +247,10 @@ body {
         //-------------------進度條-------------------------
         #progressBar{
             margin-top: 7rem;
-            padding: 2rem 2rem 0 ;
+            padding: 3rem 2rem ;
+            width: 100%;
+            height: 32rem;
+            background-color: rgba(97, 97, 97, 0.233);
             .item{
                 // width: 30rem;
                 display: flex;
@@ -274,158 +277,201 @@ body {
     // ------------02------------
     .portfolio{
         position: fixed;
-        top: 225rem;
+        top: 220rem;
         right: 50%;
         width: 50rem;
         height: 18rem;
         padding: 1rem;
         transform: translate(50%, -50%);
-        background-color: #2a442ad3;
-        outline: 1px solid rgb(255, 255, 255);
+        outline: 3px solid rgb(255, 255, 255);
         color: #ffe4e4;
 
         h1 {font-size: 6rem;}
         p {font-size: 1.5rem;}
+    }
+    // -----------輪播--------------
+    #carouselExampleControls{
+        position: fixed;
+        top: 253rem;
+        right: 50%;
+        width: 60rem;
+        height: 50rem;
+        padding: 1rem;
+        transform: translate(50%, -50%);
+        display: flex;
+        align-items: center;
 
+        .carousel-inner{
+            width: 100%;
+        }
     }
 
     // -------------03------------
     .experience{
         position: fixed;
-        top: 380rem;
+        top: 307rem;
         right: 50%;
         width: 50rem;
-        height: 18rem;
+        height: 10rem;
         padding: 1rem;
         transform: translate(50%, -50%);
-        background-color: #2a442ad3;
-        outline: 1px solid rgb(255, 255, 255);
+        // background-color: #2a442ad3;
+        outline: 3px solid rgb(255, 255, 255);
         color: #ffe4e4;
         
         h1 {font-size: 6rem;}
         p {font-size: 1.5rem;}
 
+        .autumn.leaf{
+            width: 6rem;
+            height: 4rem;
+            background-color: aqua;
+        }
+
+
         //-------------------進度條-------------------------
-        #progressBar{
+        /* The actual timeline (the vertical ruler) */
+        .timeline {
             position: relative;
-            margin: 30rem 0 0 0 ;
-            top: 25rem;
+            max-width: 1200px;
+            margin: 5rem 0 0 0;
             right: 12rem;
-            width: 70rem;
-            height: 50px;
-            transform: rotate( 90deg);
-            
+            // background-color: #FF9F55;
         }
-        #progressBar div{
-            width: 100%;
-            height: 10px;
+        
+        /* The actual timeline (the vertical ruler) */
+        .timeline::after {
+            content: '';
             position: absolute;
-            top:50%;
-            left: 0;
-            margin-top:-20px;
-            background: rgb(255, 255, 255);
+            width: 6px;
+            background-color: rgb(197, 202, 199);
+            top: 0;
+            bottom: 0;
+            left: 75%;
+            margin-left: -3px;
         }
-        #progressBar div p{
+        
+        /* Container around content */
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        /* The circles on the timeline */
+        .container::after {
+            content: '';
             position: absolute;
-            display: inline-block;
-            background: rgb(78, 158, 78);
-            height: 10px;
-            width: 100%;
-            -webkit-animation:bgLoad 5.5s linear;
-        }
-        @-webkit-keyframes bgLoad{
-            0%{
-                width: 0%;
-            }
-            18.18%,27.27%{
-                width:25%;
-            }
-            45.45%,54.54%{
-                width: 50%;
-            }
-            72.72%,81.81%{
-                width: 75%;
-            }
-            100%{
-                width:100%;
-            }
-        }
-        #progressBar>p{
-            position: absolute;
-            top:0;
-            margin-top: -10px;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
+            right: -15px;
+            background-color: rgb(84, 180, 110);
+            border: 4px solid #3e912c;
+            top: 15px;
             border-radius: 50%;
-            background: rgb(255, 255, 255);
-            margin-left: -20px;
-            color:#fff;
+            z-index: 1;
         }
-        @-webkit-keyframes circleLoad_1{
-            0%,66.66%{
-                background: rgb(255, 255, 255);
+        
+        /* Place the container to the left */
+        .left {
+            left: 0;
+        }
+        
+        /* Place the container to the right */
+        .right {
+            left: 50%;
+        }
+        
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent rgb(38, 122, 66);
+        }
+        
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent rgb(38, 122, 66) transparent transparent;
+        }
+        
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -16px;
+        }
+        
+        /* The actual content */
+        .content {
+            width: 18.3rem;
+            padding: 20px 20px;
+            background-color: rgb(38, 122, 66);
+            position: relative;
+            border-radius: 6px;
+        }
+        
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+            /* Place the timelime to the left */
+            .timeline::after {
+            left: 31px;
             }
-            100%{
-                background:rgb(78, 158, 78);
+            
+            /* Full-width containers */
+            .container {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
             }
-        }
-        @-webkit-keyframes circleLoad_2{
-            0%,83.34%{
-                background: rgb(255, 255, 255);
+            
+            /* Make sure that all arrows are pointing leftwards */
+            .container::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
             }
-            100%{
-                background:rgb(78, 158, 78);
+        
+            /* Make sure all circles are at the same spot */
+            .left::after, .right::after {
+            left: 15px;
             }
-        }
-        @-webkit-keyframes circleLoad_3{
-            0%,88.88%{
-                background: rgb(255, 255, 255);
+            
+            /* Make all right containers behave like the left ones */
+            .right {
+            left: 0%;
             }
-            100%{
-                background:rgb(78, 158, 78);
-            }
-        }
-        @-webkit-keyframes circleLoad_4{
-            0%,91.67%{
-                background: rgb(255, 255, 255);
-            }
-            100%{
-                background:rgb(78, 158, 78);
-            }
-        }
-        #progressBar p:nth-child(2){
-            left: 0%;background:rgb(78, 158, 78);
-        }
-        #progressBar p:nth-child(3){
-            left: 25%;background:rgb(78, 158, 78);
-            -webkit-animation:circleLoad_1 1.5s ease-in;
-        }
-        #progressBar p:nth-child(4){
-            left: 50%;background:rgb(78, 158, 78);
-            -webkit-animation:circleLoad_2 3s ease-in;
-        }
-        #progressBar p:nth-child(5){
-            left: 75%;background:rgb(78, 158, 78);
-            -webkit-animation:circleLoad_3 4.5s ease-in;
-        }
-        #progressBar p:nth-child(6){
-            left: 100%;background:rgb(78, 158, 78);
-            -webkit-animation:circleLoad_4 6s ease-in;
-        }
+        }     
+       
 
     }
-
+    // -------------03------------
 
     // ---------banner4------------
     // ------------04------------
     .contact{
         position: fixed;
         display: flex;
-        top: 510rem;
+        top: 443rem;
         right: 50%;
-        width: 50rem;
-        height: 24rem;
-        padding: 1rem;
+        width: 65rem;
+        height: 38rem;
+        padding: 4rem 2rem;
         transform: translate(50%, -50%);
         background-color: #2a442ad3;
         // outline: 1px solid rgb(255, 255, 255);
@@ -440,13 +486,18 @@ body {
 
         .inputInform{
             width: 50%;
-            box-sizing: border-box;
-            // display: flex;
+            margin-top: 1rem;
             #name{width: 50%;}
             #phone{width: 50%;}
             #email{width: 100%;}
             #message{width: 100%;}
 
+            .btn-primary{
+                margin-top: 1rem;
+            }
+            #textarea{
+                margin-top: 1.5rem;
+            }
         }
 
     }
@@ -459,6 +510,18 @@ body {
         height: 5rem;
         justify-content: center;
         align-items: center;
-        background-color: #203320c5;
+        background-color: #122212c5;
+
+        .logo{
+            margin:0 3rem;
+            font-size: 3rem;
+            // font-family: 'Satisfy', cursive;
+            -webkit-text-stroke: 1px rgb(255, 255, 254);
+            -webkit-text-fill-color: transparent;
+        }
+        span{
+            margin-right: 5rem;
+            color: white;
+        }
     }
 }
