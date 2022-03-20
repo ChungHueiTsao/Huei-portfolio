@@ -1,9 +1,9 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: 5px solid black;
 }
 
 body {
@@ -17,7 +17,6 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  /*在PC上隱藏漢堡選單*/
 }
 
 .index #topIcon {
@@ -47,25 +46,25 @@ body {
   position: relative;
 }
 
-.index .logo {
+.index .header .logo {
   margin-left: 2rem;
   font-size: 3rem;
   -webkit-text-stroke: 1px #fffffe;
   -webkit-text-fill-color: transparent;
 }
 
-.index .menu {
+.index .header .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
 }
 
-.index .menu li {
+.index .header .menu li {
   list-style: none;
 }
 
-.index .menu li a {
+.index .header .menu li a {
   padding: 0 0 0 0.5rem;
   margin: 0 2rem;
   font-size: 1.3rem;
@@ -77,7 +76,7 @@ body {
   background-clip: text;
 }
 
-.index .menu li a:hover {
+.index .header .menu li a:hover {
   font-size: 1.4rem;
   color: white;
   -webkit-background-clip: text;
@@ -87,54 +86,53 @@ body {
   border-left: 3px solid rgba(121, 231, 150, 0.747);
 }
 
-.index .showmenu {
-  display: none;
-  font-size: 3rem;
+.index .header .container {
+  visibility: hidden;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  width: 4rem;
+  right: 1rem;
+}
+
+.index .header .bar1,
+.index .header .bar2,
+.index .header .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #8daf92;
+  margin: 6px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.index .header .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.index .header .change .bar2 {
+  opacity: 0;
+}
+
+.index .header .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 @media screen and (max-width: 890px) {
-  .index {
-    /*jQ點擊後動態在 body 加上 class */
+  .index .header .container {
+    visibility: visible;
   }
-  .index .container {
-    display: inline;
-    cursor: pointer;
-    position: fixed;
-    width: 4rem;
-    right: 1rem;
-  }
-  .index .bar1,
-  .index .bar2,
-  .index .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #8daf92;
-    margin: 6px 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-  }
-  .index .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  .index .change .bar2 {
-    opacity: 0;
-  }
-  .index .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
-  .index .menu {
+  .index .header .menu {
     display: inline-block;
-    /*隱藏選單開始*/
-    /*絕對定位疊在網頁上*/
     position: absolute;
     width: 100%;
     top: 4rem;
     background: #2d442d;
     z-index: 100;
   }
-  .index .menu li {
+  .index .header .menu li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -145,18 +143,15 @@ body {
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #475f45;
   }
-  .index .menu li a {
+  .index .header .menu li a {
     font-size: 1.5rem;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     border-left: 3px solid rgba(140, 148, 144, 0.747);
   }
-  .index .menu li a:hover {
+  .index .header .menu li a:hover {
     font-size: 2rem;
     color: #fff;
-  }
-  .index .menu-show .menu {
-    max-height: 500px;
   }
 }
 
@@ -286,6 +281,7 @@ body {
 @media screen and (max-width: 890px) {
   .index .HOME .pic {
     width: 100%;
+    height: 30rem;
     border-top: 5px solid white;
     border-left: 0;
     border-top-right-radius: 0px;
@@ -293,10 +289,22 @@ body {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .index .HOME .pic {
+    height: 23.5rem;
+  }
+}
+
+@media (max-width: 703px) {
+  .index .HOME .pic {
+    height: 23.5rem;
+  }
+}
+
 .index .introduce {
   position: fixed;
   z-index: 3;
-  padding: 5rem 2rem 2rem 2rem;
+  padding: 5rem 2rem;
   top: 95rem;
   right: 50%;
   -webkit-transform: translate(50%, -50%);
@@ -311,13 +319,13 @@ body {
 @media screen and (max-width: 890px) {
   .index .introduce {
     width: 80%;
-    height: 49rem;
+    background-color: #073324;
   }
 }
 
 @media screen and (max-width: 375px) {
   .index .introduce {
-    margin-top: 2rem;
+    background-color: #645332;
   }
 }
 
@@ -335,19 +343,16 @@ body {
 }
 
 .index .introduce .container {
-  color: #ffe4e4;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  color: #ffe4e4;
   font-weight: 500;
 }
 
-@media screen and (max-width: 890px) {
-  .index .introduce .container {
-    padding-right: 2rem;
-    width: 90%;
-  }
+.index .introduce .container ul {
+  width: 100%;
 }
 
 .index .introduce .container ul li {
@@ -358,14 +363,8 @@ body {
 }
 
 .index .introduce .container p {
-  margin: 2rem auto;
+  margin: 2rem 0 3rem 0;
   font-size: 1.7rem;
-}
-
-@media screen and (max-width: 890px) {
-  .index .introduce .container p {
-    margin-bottom: 2rem;
-  }
 }
 
 .index .PROFESSIONAL {
@@ -453,12 +452,30 @@ body {
   color: #ffe4e4;
 }
 
+@media screen and (max-width: 768px) {
+  .index .portfolio {
+    width: 90%;
+  }
+}
+
 .index .portfolio h1 {
   font-size: 6rem;
 }
 
+@media screen and (max-width: 768px) {
+  .index .portfolio {
+    width: 80%;
+  }
+}
+
 .index .portfolio p {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .index .portfolio {
+    width: 80%;
+  }
 }
 
 .index #carouselExampleControls {
@@ -467,7 +484,6 @@ body {
   right: 50%;
   width: 60rem;
   height: 50rem;
-  padding: 1rem;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
   display: -webkit-box;
@@ -476,6 +492,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ffe4e4;
+}
+
+@media screen and (max-width: 768px) {
+  .index #carouselExampleControls {
+    background-color: #fff;
+    width: 90%;
+    height: 5%;
+  }
 }
 
 .index #carouselExampleControls .carousel-inner {
@@ -494,16 +519,6 @@ body {
   outline: 3px solid white;
   color: #ffe4e4;
   /* The actual timeline (the vertical ruler) */
-  /* The actual timeline (the vertical ruler) */
-  /* Container around content */
-  /* The circles on the timeline */
-  /* Place the container to the left */
-  /* Place the container to the right */
-  /* Add arrows to the left container (pointing right) */
-  /* Add arrows to the right container (pointing left) */
-  /* Fix the circle for containers on the right side */
-  /* The actual content */
-  /* Media queries - Responsive timeline on screens less than 600px wide */
 }
 
 .index .experience h1 {
@@ -523,45 +538,57 @@ body {
 .index .experience .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 5rem 0 0 0;
-  right: 12rem;
+  margin: 5rem 0;
+  /* The actual timeline (the vertical ruler) */
 }
 
 .index .experience .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 7px;
   background-color: #c5cac7;
   top: 0;
   bottom: 0;
-  left: 75%;
-  margin-left: -3px;
+  left: 50%;
 }
 
-.index .experience .container {
-  padding: 10px 40px;
+.index .experience .timeline .area {
+  /* Container around content */
+  /* The circles on the timeline */
+  /* Fix the circle for containers on the right side */
+  /* Place the container to the left */
+  /* Place the container to the right */
+  /* Add arrows to the left container (pointing right) */
+  /* Add arrows to the right container (pointing left) */
+  /* The actual content */
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+}
+
+.index .experience .timeline .area .container {
   position: relative;
-  background-color: inherit;
   width: 50%;
+  padding: 10px 40px;
+  margin-right: 200rem;
+  background-color: inherit;
 }
 
-.index .experience .container p {
+.index .experience .timeline .area .container p {
   margin-top: -1.5rem;
   font-size: 1.2rem;
 }
 
-.index .experience .container li {
+.index .experience .timeline .area .container li {
   margin: 1rem 0;
   font-size: 1.3rem;
   font-weight: 600;
 }
 
-.index .experience .container::after {
+.index .experience .timeline .area .container::after {
   content: '';
   position: absolute;
   width: 30px;
   height: 30px;
-  right: -15px;
+  right: -17px;
   background-color: #54b46e;
   border: 4px solid #3e912c;
   top: 15px;
@@ -569,28 +596,32 @@ body {
   z-index: 1;
 }
 
-.index .experience .left {
+.index .experience .timeline .area .right::after {
+  left: -13px;
+}
+
+.index .experience .timeline .area .left {
   left: 0;
 }
 
-.index .experience .right {
+.index .experience .timeline .area .right {
   left: 50%;
 }
 
-.index .experience .left::before {
+.index .experience .timeline .area .left::before {
   content: " ";
   height: 0;
   position: absolute;
   top: 22px;
   width: 0;
   z-index: 1;
-  right: 30px;
+  right: 32px;
   border: medium solid white;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #267a42;
 }
 
-.index .experience .right::before {
+.index .experience .timeline .area .right::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -603,11 +634,7 @@ body {
   border-color: transparent #267a42 transparent transparent;
 }
 
-.index .experience .right::after {
-  left: -16px;
-}
-
-.index .experience .content {
+.index .experience .timeline .area .content {
   width: 18.3rem;
   padding: 20px 20px;
   background-color: #267a42;

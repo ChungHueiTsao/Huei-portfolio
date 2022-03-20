@@ -6,8 +6,8 @@
 
 $(document).ready(function() {
   $('.container').on('click',function() {
+    $('.menu').show();
     $(this).toggleClass("change");
-    // $(this).preventDefault(); //這邊用不到停止事件
     
     $(this).hasClass('change')?$('.menu').slideDown():$('.menu').slideUp();
   })
