@@ -333,23 +333,20 @@ body {
     .introduce {
         position: fixed;
         z-index: 3;
-        padding: 5rem 2rem;
+        padding: 5rem 0 2rem 0;
         top: 95rem;
         right: 50%;
         transform: translate(50%, -50%);
-        width: 60rem;
-        height: 45rem;
+        width: 58rem;
+        height:fit-content;
+        height:-webkit-fit-content;
+        height:-moz-fit-content;
         background-color: #487448f3;
         box-shadow: rgba(10, 9, 9, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
         @include part1{
             width: 80%;
             // height: 49rem;
-            background-color: rgb(7, 51, 36);
-        }
-        @include mobile{
-            // margin-top: 2rem;;
-            background-color: rgb(100, 83, 50);
         }
 
         .title {
@@ -395,10 +392,12 @@ body {
     //--------------01----------------
     .PROFESSIONAL {
         position: fixed;
+        margin-top: 3rem;
         top: 140rem;
         right: 50%;
         width: 50rem;
-        height: 20rem;
+        // height: fit-content;
+        height: 22rem;
         padding: 1rem;
         transform: translate(50%, -50%);
         // background-color: #2a442ad3;
@@ -410,18 +409,24 @@ body {
         }
 
         p {
+            margin-top: 2rem;
             font-size: 1.5rem;
         }
         @include part1{
-            width: 60%;
-            h1{
-                margin: 0 1rem 0 0 ;
+            background-color: #8b8b8b;
+            width: 70%;
+            h1{ 
+                background-color: red;
+                // margin: 0 1rem 0 0 ;
                 font-size: 5rem; 
             }
         }
         @include mobile{
-            width: 40%;
-            h1{font-size: 3rem;}
+            background-color: #ffb4b4;
+            height: 15rem;
+            
+            h1{font-size: 2rem;}
+            p{font-size: 0.5;}
         }
 
         //-------------------進度條-------------------------
@@ -492,7 +497,6 @@ body {
         transform: translate(50%, -50%);
         display: flex;
         align-items: center;
-        background-color: #ffe4e4;
         @include pad{
             background-color: #fff;
             width: 90%;
