@@ -368,6 +368,7 @@ body {
   top: 140rem;
   right: 50%;
   width: 50rem;
+  word-wrap: break-word;
   height: 22rem;
   padding: 1rem;
   -webkit-transform: translate(50%, -50%);
@@ -391,8 +392,11 @@ body {
     width: 70%;
   }
   .index .PROFESSIONAL h1 {
+    font-size: 4rem;
+  }
+  .index .PROFESSIONAL h1:nth-child(2) {
     background-color: red;
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
