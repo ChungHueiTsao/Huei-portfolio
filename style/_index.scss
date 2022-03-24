@@ -36,28 +36,18 @@ body {
 
 .index {
     user-select: none;
-    
-    #topIcon{
-        position: fixed;
-        width: 5rem;
-        height: 5rem;
-        right: 5px;
-        bottom: 10px;
-        z-index: 5;
-        color: #346928;
-        &:hover{
-            color: #64ac54;
-        }
-    }
-
 
     .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 5;
         display: flex;
         margin: 0 auto;
         align-items: center;
         height: 4rem;
-        background-color: #122212c5;
-        position: relative;
+        background-color: #476147;
+        // position: relative;
         
         .logo {
             margin-left: 2rem;
@@ -267,10 +257,10 @@ body {
 
     //-------------banner1----------------
     .HOME {
-        position: fixed;
+        position: absolute;
         display: flex;
         z-index: 3;
-        top: 30rem;
+        top: 35rem;
         right: 50%;
         transform: translate(50%, -50%);
         width: 72rem;
@@ -331,7 +321,7 @@ body {
     }
 
     .introduce {
-        position: fixed;
+        position: absolute;
         z-index: 3;
         padding: 5rem 0 2rem 0;
         top: 95rem;
@@ -391,13 +381,13 @@ body {
     //--------------banner2----------------
     //--------------01----------------
     .PROFESSIONAL {
-        position: fixed;
+        position: absolute;
         margin-top: 3rem;
-        top: 140rem;
+        top: 40rem;
         right: 50%;
         width: 50rem;
-        word-wrap: break-word;
-        height: 22rem;
+        // word-wrap: break-word;
+        height: 20rem;
         padding: 1rem;
         transform: translate(50%, -50%);
         outline: 3px solid rgb(255, 255, 255);
@@ -405,35 +395,44 @@ body {
 
         h1 {
             font-size: 6rem;
+            &:nth-child(2){ margin-top: -1rem;}
         }
 
         p {
-            margin-top: 2rem;
+            // margin-top: 2rem;
             font-size: 1.5rem;
         }
         @include part1{
             background-color: #8b8b8b;
-            width: 70%;
+            width: 80%;
+            height: 18rem;
             h1{ 
-                font-size: 4rem; 
+                font-size: 5rem; 
                 &:nth-child(2){
                     background-color: red;
-                    font-size: 4rem;
+                    font-size: 5rem;
                 }
             }
         }
         @include mobile{
+            top: 50rem;
             background-color: #ffb4b4;
             height: 15rem;
             
-            h1{font-size: 2rem;}
-            p{font-size: 0.5;}
+            h1{
+                font-size: 2rem;
+                &:nth-child(2){
+                    background-color: rgb(124, 96, 96);
+                    font-size: 2rem;
+                }
+            }
+            p{font-size: 10px;}
         }
 
         //-------------------進度條-------------------------
         #progressBar {
             margin-top: 7rem;
-            padding: 3rem 2rem;
+            padding: 2rem 1rem;
             width: 100%;
             height: 32rem;
             background-color: rgba(97, 97, 97, 0.233);
@@ -441,8 +440,9 @@ body {
             .item {
                 // width: 30rem;
                 display: flex;
+                align-items: center;
                 width: 100%;
-                height: 5rem;
+                height: 4.5rem;
 
                 .label {
                     flex-grow: 1;
@@ -456,6 +456,22 @@ body {
                     width: 13rem;
                 }
             }
+            @include part1{
+                height: 4rem;
+                .item{
+                    display: inline;
+                    // height: 1rem;
+                    .label{
+                        height: 2.5rem;
+                        margin: 1rem 0;
+                    }
+                    .bar{
+                        width: 100%;
+                        padding-bottom: 2rem;
+                    }
+                }
+    
+            }
 
         }
 
@@ -465,7 +481,7 @@ body {
     // ---------banner3------------
     // ------------02------------
     .portfolio {
-        position: fixed;
+        position: absolute;
         top: 220rem;
         right: 50%;
         width: 50rem;
@@ -477,21 +493,25 @@ body {
         @include pad{
             width: 90%;
         }
-        h1 {font-size: 6rem;}
-        @include pad{
-            width: 80%;
+        h1 {
+            font-size: 6rem;
+            @include pad{
+                font-size: 4rem;
+            }
         }
-        p {font-size: 1.5rem;}
-        @include pad{
-            width: 80%;
+        p {
+            font-size: 1.5rem;
+            @include pad{
+                font-size: 0.5rem;
+            }
         }
 
     }
 
     // -----------輪播--------------
     #carouselExampleControls {
-        position: fixed;
-        top: 253rem;
+        position: absolute;
+        top: 255rem;
         right: 50%;
         width: 60rem;
         height: 50rem;
@@ -511,7 +531,7 @@ body {
 
     // -------------------03---------------------
     .experience {
-        position: fixed;
+        position: absolute;
         top: 307rem;
         right: 50%;
         width: 50rem;
@@ -657,7 +677,7 @@ body {
     // ---------banner4------------
     // ------------04------------
     .contact {
-        position: fixed;
+        position: absolute;
         display: flex;
         top: 443rem;
         right: 50%;
@@ -670,7 +690,6 @@ body {
         color: #ffe4e4;
         @include part1{
             height: 55rem;
-            
         }
         
         .container {
@@ -702,6 +721,19 @@ body {
             }
         }
 
+    }
+
+    #topIcon{
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        right:0rem;
+        bottom: 10rem;
+        // z-index: 10;
+        color: #346928;
+        &:hover{
+            color: #64ac54;
+        }
     }
 
     //---------------內文-----------------------
