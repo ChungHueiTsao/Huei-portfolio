@@ -19,21 +19,11 @@ body {
           user-select: none;
 }
 
-.index #topIcon {
-  position: fixed;
-  width: 5rem;
-  height: 5rem;
-  right: 5px;
-  bottom: 10px;
-  z-index: 5;
-  color: #346928;
-}
-
-.index #topIcon:hover {
-  color: #64ac54;
-}
-
 .index .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,8 +32,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 4rem;
-  background-color: #122212c5;
-  position: relative;
+  background-color: #476147;
 }
 
 .index .header .logo {
@@ -219,12 +208,12 @@ body {
 }
 
 .index .HOME {
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 3;
-  top: 30rem;
+  top: 35rem;
   right: 50%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
@@ -302,7 +291,7 @@ body {
 }
 
 .index .introduce {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   padding: 5rem 0 2rem 0;
   top: 95rem;
@@ -363,13 +352,12 @@ body {
 }
 
 .index .PROFESSIONAL {
-  position: fixed;
+  position: absolute;
   margin-top: 3rem;
-  top: 140rem;
+  top: 40rem;
   right: 50%;
   width: 50rem;
-  word-wrap: break-word;
-  height: 22rem;
+  height: 20rem;
   padding: 1rem;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
@@ -381,41 +369,50 @@ body {
   font-size: 6rem;
 }
 
+.index .PROFESSIONAL h1:nth-child(2) {
+  margin-top: -1rem;
+}
+
 .index .PROFESSIONAL p {
-  margin-top: 2rem;
   font-size: 1.5rem;
 }
 
 @media screen and (max-width: 890px) {
   .index .PROFESSIONAL {
     background-color: #8b8b8b;
-    width: 70%;
+    width: 80%;
+    height: 18rem;
   }
   .index .PROFESSIONAL h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   .index .PROFESSIONAL h1:nth-child(2) {
     background-color: red;
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }
 
 @media screen and (max-width: 375px) {
   .index .PROFESSIONAL {
+    top: 50rem;
     background-color: #ffb4b4;
     height: 15rem;
   }
   .index .PROFESSIONAL h1 {
     font-size: 2rem;
   }
+  .index .PROFESSIONAL h1:nth-child(2) {
+    background-color: #7c6060;
+    font-size: 2rem;
+  }
   .index .PROFESSIONAL p {
-    font-size: 0.5;
+    font-size: 10px;
   }
 }
 
 .index .PROFESSIONAL #progressBar {
   margin-top: 7rem;
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
   width: 100%;
   height: 32rem;
   background-color: rgba(97, 97, 97, 0.233);
@@ -425,8 +422,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  height: 5rem;
+  height: 4.5rem;
 }
 
 .index .PROFESSIONAL #progressBar .item .label {
@@ -445,8 +445,25 @@ body {
   width: 13rem;
 }
 
+@media screen and (max-width: 890px) {
+  .index .PROFESSIONAL #progressBar {
+    height: 4rem;
+  }
+  .index .PROFESSIONAL #progressBar .item {
+    display: inline;
+  }
+  .index .PROFESSIONAL #progressBar .item .label {
+    height: 2.5rem;
+    margin: 1rem 0;
+  }
+  .index .PROFESSIONAL #progressBar .item .bar {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+}
+
 .index .portfolio {
-  position: fixed;
+  position: absolute;
   top: 220rem;
   right: 50%;
   width: 50rem;
@@ -469,8 +486,8 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .index .portfolio {
-    width: 80%;
+  .index .portfolio h1 {
+    font-size: 4rem;
   }
 }
 
@@ -479,14 +496,14 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .index .portfolio {
-    width: 80%;
+  .index .portfolio p {
+    font-size: 0.5rem;
   }
 }
 
 .index #carouselExampleControls {
-  position: fixed;
-  top: 253rem;
+  position: absolute;
+  top: 255rem;
   right: 50%;
   width: 60rem;
   height: 50rem;
@@ -513,7 +530,7 @@ body {
 }
 
 .index .experience {
-  position: fixed;
+  position: absolute;
   top: 307rem;
   right: 50%;
   width: 50rem;
@@ -648,7 +665,7 @@ body {
 }
 
 .index .contact {
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -726,6 +743,19 @@ body {
   .index .contact .inputInform .btn {
     width: 100%;
   }
+}
+
+.index #topIcon {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  right: 0rem;
+  bottom: 10rem;
+  color: #346928;
+}
+
+.index #topIcon:hover {
+  color: #64ac54;
 }
 
 .index .footer {
