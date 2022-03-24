@@ -3,7 +3,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 5px solid black;
 }
 
 body {
@@ -447,7 +446,7 @@ body {
 
 @media screen and (max-width: 890px) {
   .index .PROFESSIONAL #progressBar {
-    height: 4rem;
+    height: 45rem;
   }
   .index .PROFESSIONAL #progressBar .item {
     display: inline;
@@ -559,8 +558,8 @@ body {
 
 .index .experience .timeline {
   position: relative;
-  max-width: 1200px;
-  margin: 5rem 0;
+  max-width: 50rem;
+  margin: 5rem auto;
   /* The actual timeline (the vertical ruler) */
 }
 
@@ -575,6 +574,7 @@ body {
 }
 
 .index .experience .timeline .area {
+  width: 100%;
   /* Container around content */
   /* The circles on the timeline */
   /* Fix the circle for containers on the right side */
@@ -664,6 +664,28 @@ body {
   border-radius: 6px;
 }
 
+@media screen and (max-width: 890px) {
+  .index .experience .timeline {
+    background-color: #ffb4b4;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .index .experience .timeline {
+    background-color: #b62323;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .index .experience .timeline {
+    background-color: #b4fff9;
+    width: 90%;
+  }
+}
+
 .index .contact {
   position: absolute;
   display: -webkit-box;
@@ -680,12 +702,6 @@ body {
   color: #ffe4e4;
 }
 
-@media screen and (max-width: 890px) {
-  .index .contact {
-    height: 55rem;
-  }
-}
-
 .index .contact .container {
   width: 50%;
 }
@@ -696,14 +712,6 @@ body {
 
 .index .contact .container p {
   font-size: 1.5rem;
-}
-
-@media screen and (max-width: 890px) {
-  .index .contact .container {
-    width: 50%;
-    left: 1rem;
-    margin-top: -3rem;
-  }
 }
 
 .index .contact .inputInform {
@@ -736,26 +744,41 @@ body {
 }
 
 @media screen and (max-width: 890px) {
+  .index .contact {
+    display: block;
+    width: 80%;
+    height: 55rem;
+  }
+  .index .contact .container {
+    width: 100%;
+    left: 1rem;
+    margin-top: -3rem;
+  }
+  .index .contact .container h3 {
+    font-size: 5rem;
+  }
   .index .contact .inputInform {
-    width: 50%;
-    margin: 17rem auto;
+    width: 100%;
+    margin: 2rem auto;
   }
   .index .contact .inputInform .btn {
     width: 100%;
   }
 }
 
-.index #topIcon {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
-  right: 0rem;
-  bottom: 10rem;
-  color: #346928;
+@media screen and (max-width: 768px) {
+  .index .contact .container h3 {
+    font-size: 4rem;
+  }
 }
 
-.index #topIcon:hover {
-  color: #64ac54;
+@media screen and (max-width: 375px) {
+  .index .contact {
+    height: 58rem;
+  }
+  .index .contact .container h3 {
+    font-size: 3rem;
+  }
 }
 
 .index .footer {

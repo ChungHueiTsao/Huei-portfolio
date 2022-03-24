@@ -24,7 +24,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 5px solid black;
+    // outline: 5px solid black;
 }
 
 body {
@@ -457,7 +457,7 @@ body {
                 }
             }
             @include part1{
-                height: 4rem;
+                height: 45rem;
                 .item{
                     display: inline;
                     // height: 1rem;
@@ -557,12 +557,12 @@ body {
         }
 
 
-        //-------------------03進度條-------------------------
+        //-------------------03經驗-------------------------
         /* The actual timeline (the vertical ruler) */
         .timeline {
             position: relative;
-            max-width: 1200px;
-            margin: 5rem 0;
+            max-width: 50rem;
+            margin: 5rem auto;
             // background-color: #FF9F55;
             /* The actual timeline (the vertical ruler) */
             &::after{
@@ -575,6 +575,8 @@ body {
                 left: 50%;
             }
             .area{
+                width: 100%;
+                // background-color: #ffb4b4;
                 /* Container around content */
                 .container {
                     position: relative;
@@ -664,6 +666,21 @@ body {
                 /* Media queries - Responsive timeline on screens less than 600px wide */
 
             }
+
+            @include part1{
+                background-color: #ffb4b4;
+                margin: 0 auto;
+                width: 90%;
+                
+            }
+            @include pad{
+                background-color: #b62323;
+                width: 90%;
+            }
+            @include mobile{
+                background-color: #b4fff9;
+                width: 90%;
+            }
     
         }
 
@@ -688,21 +705,13 @@ body {
         background-color: #2a442ad3;
         // outline: 1px solid rgb(255, 255, 255);
         color: #ffe4e4;
-        @include part1{
-            height: 55rem;
-        }
         
         .container {
             
             width: 50%;
             h3 {font-size: 6rem;}
             p {font-size: 1.5rem;}
-            @include part1{
-                width: 50%;  
-                left: 1rem;
-                margin-top: -3rem;
-                // margin: 0 auto;
-            }
+            
         }
         
         .inputInform {
@@ -714,26 +723,37 @@ body {
             #message {width: 100%;}
             .btn-primary {margin-top: 1rem;}
             #textarea {margin-top: 1.5rem;}
-            @include part1{
-                width: 50%;  
-                margin: 17rem auto ;
+        }
+
+        @include part1{
+            display: block;
+            width: 80%;
+            // background-color: #ffb4b4;
+            height: 55rem;
+            .container{
+                width: 100%;  
+                left: 1rem;
+                margin-top: -3rem;
+                h3{font-size: 5rem}
+            }
+            .inputInform{
+                width: 100%;  
+                margin: 2rem auto ;
                 .btn{width: 100%;}
             }
         }
-
-    }
-
-    #topIcon{
-        position: relative;
-        width: 5rem;
-        height: 5rem;
-        right:0rem;
-        bottom: 10rem;
-        // z-index: 10;
-        color: #346928;
-        &:hover{
-            color: #64ac54;
+        @include pad{
+            .container{
+                h3{font-size: 4rem;}
+            }
         }
+        @include mobile{
+            height: 58rem;
+            .container{
+                h3{font-size: 3rem;}
+            }
+        }
+
     }
 
     //---------------內文-----------------------
