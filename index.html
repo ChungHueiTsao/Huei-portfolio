@@ -7,7 +7,7 @@
 
     <!-- Title logo icon -->
     <link rel="icon" href="../img/favicon.ico.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 
     <!-- SCSS -->
     <link rel="stylesheet" href="style/style.css">
@@ -231,25 +231,25 @@
                         <h3>CONTACT</h3>
                         <p>I'm a Front-end engineer. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</p>
                     </div>
-                    <form class="inputInform">
-                        <form class="row g-3" action="https://formspree.io/f/mzbovaaq" method="POST">
+                    <form class="inputInform" action="https://formspree.io/f/mzbovaaq" method="post">
+                        <form class="row g-3 inputInform" >
                             <div class="col-12">
                                 <label for="inputName" class="form-label">Name</label>
                                 <input type="text" class="form-control" 
-                                name="Name"
+                                name="name"
                                 id="inputName" 
                                 placeholder="Name">
                             </div>
                             <div class="col-12">
                                 <label for="inputEmail" class="form-label">Email</label>
                                 <input type="email" class="form-control" 
-                                name="Email"
+                                name="email"
                                 id="inputEmail" placeholder="Email">
                             </div>
                             <div class="col-12">
                                 <label for="inputPhone" class="form-label">Phone</label>
                                 <input type="text" class="form-control" 
-                                name="Phone"
+                                name="phone"
                                 id="inputPhone" placeholder="Phone"
                                 oninput = "value=value.replace(/[^\d]/g,'')"
                                 maxlength="10">

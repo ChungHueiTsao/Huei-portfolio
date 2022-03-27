@@ -12,3 +12,5 @@ $(document).ready(function() {
     $(this).hasClass('change')?$('.menu').slideDown():$('.menu').slideUp();
   })
 });
+
+$(window).
