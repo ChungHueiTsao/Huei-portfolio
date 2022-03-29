@@ -3,7 +3,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 3px solid black;
 }
 
 body {
@@ -483,6 +482,7 @@ body {
 
 .index .portfolio h1 {
   font-size: 6rem;
+  margin-top: -1.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -499,6 +499,19 @@ body {
   .index .portfolio p {
     font-size: 0.5rem;
   }
+}
+
+.index .portfolio button {
+  position: relative;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.562);
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  top: 50rem;
+}
+
+.index .portfolio button:hover {
+  background-color: white;
 }
 
 .index #carouselExampleControls {
@@ -806,5 +819,9 @@ body {
 .index .footer span {
   margin-right: 5rem;
   color: white;
+}
+
+.latestwork h1 {
+  background-color: aqua;
 }
 /*# sourceMappingURL=style.css.map */
